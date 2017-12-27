@@ -6,12 +6,3 @@ Links to the following
 2. Link to your project (you might need to come back to this)
 3. Link to your assignment (you might need to come back to this)
 
-
-
-
-1. git clone https://github.com/jannunzi/web-dev-template.git
-1. cd web-dev-template
-1. npm install
-1. mongod
-1. node server.js
-1. browse to localhost:3000
