@@ -9,6 +9,12 @@ app.use(express.static(__dirname + '/public'));  //static content that can be se
 //     res.send({message: 'hello world from the server'});
 // });
 
+// to load app.js on the server side
+var myApp = require('./lectures/afternoon/app'); // the value of myApp comes from module.exports from server-side app.js
+// console.log(myApp);
+// myApp.sayHello();
+myApp(app);
+
 app.listen(3000);
 
 // var express = require('express');

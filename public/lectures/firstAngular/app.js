@@ -1,3 +1,4 @@
+// client-side application, doesnt have access to file system and database, and have limited access to the network; but has access to keyboard, view, and layout
 // put all the source code in the function to protect from outside meddleling and meddling with others code.
 // to protect polluting global naming space
 (function () {  //IIFE immediately-invoked function expression
@@ -7,10 +8,18 @@
 
 
 
-    function TodoListController($scope) { //"$scope" enables the controller to be aware of the scope during the controller div
-
+    function TodoListController($scope, $http) { //"$scope" enables the controller to be aware of the scope during the controller div, to interact with DOM
+                                                // $http is the services that provides mechanisms to interact with http resources
         $scope.todo = {title: "initial title", details: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum "};
-        $scope.todos = [];
+        // $scope.todos = [];
+//talk with the server -->
+//         $scope.todos = $http.get('/api/todo');
+// only use relative path here, since it comes from the same server. for cross-domain, it is different
+        $http.get('/api/todo')  //get function returns a promise
+            .then(function (response) {
+                console.log(response);
+                $scope.todos = response.data;
+            });//call back function
 
         $scope.addTodo = addTodo;
         $scope.removeTodo = removeTodo;
@@ -21,7 +30,11 @@
         function removeTodo(todo) { //index){
             // console.log(todo);
             var index = $scope.todos.indexOf(todo);
-            $scope.todos.splice(index, 1);
+            // $scope.todos.splice(index, 1);
+            $http.delete('/api/todo/'+index)
+                .then(function (response) {
+                    $scope.todos = response.data;
+                });
         }
         function addTodo(todo) {
             // var newTodo= {
