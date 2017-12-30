@@ -3,8 +3,8 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="app.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-
+    <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
+    <link href="../../vendor/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!--script tag makes the page dynamic-->
     <!--the angular library declares a single object that can be accessible globaly &#45;&#45; angular-->
 
@@ -15,21 +15,43 @@
 
     <div class="container">
         <h1>Todo List App</h1>
-        <div ng-controller="TodoListController">
-            <!--binding the snippets of the page to the controller-->
-            <input ng-model="todo.title" class="form-control"/>
 
-            <button ng-click="addTodo(todo); todo={}" class="btn btn-block btn-primary">Add Todo</button>
+
+        <div ng-controller="TodoListController"
+             ng-init="">
+            <!--binding the snippets of the page to the controller-->
+            <label>Title</label>
+            <input ng-model="todo.title"
+                   class="form-control"/>
+
+            <label>Details</label>
+            <textarea ng-model="todo.details"
+                      class="form-control"></textarea>
+
+            <button ng-click="addTodo(todo); todo={}"
+                    class="btn btn-block btn-primary">
+                Add
+            </button>
+
+            <button ng-click="updateTodo(todo); todo={}"
+                    class="btn btn-block btn-success">
+                Update
+            </button>
 
             <ul class="list-group">
                 <li ng-repeat="todo in todos" class="list-group-item">
-                    <span ng-click="removeTodo($index)"
+                    <span ng-click="removeTodo(todo)"
                           class="pull-right glyphicon glyphicon-remove"></span>
-                    {{todo.title}}
+                    <span ng-click="selectTodo($index)" class="glyphicon glyphicon-cog pull-right"></span>
+                    <h3>{{todo.title}}</h3>
+                    <p>{{todo.details}}</p>
+                    <label>{{todo.date | date}}</label>
                 </li>
             </ul>
         </div>
         <!--scope of this controller is inside the above div-->
+
+
     </div>
 
 </body>
