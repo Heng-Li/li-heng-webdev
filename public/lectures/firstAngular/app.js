@@ -6,25 +6,25 @@
         .module("TodoApp", [])  //create or read a module; [] is used to declare dependency on other modules
         .controller("TodoListController", TodoListController); //methods chaining; "TodoListController" is the controller name
 
-
-
     function TodoListController($scope, $http) { //"$scope" enables the controller to be aware of the scope during the controller div, to interact with DOM
                                                 // $http is the services that provides mechanisms to interact with http resources
         $scope.todo = {title: "initial title", details: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum "};
-        // $scope.todos = [];
-//talk with the server -->
-//         $scope.todos = $http.get('/api/todo');
-// only use relative path here, since it comes from the same server. for cross-domain, it is different
-        $http.get('/api/todo')  //get function returns a promise
-            .then(function (response) {
-                // console.log(response);
-                $scope.todos = response.data;
-            });//call back function
-
         $scope.addTodo = addTodo;
         $scope.removeTodo = removeTodo;
         $scope.selectTodo = selectTodo;
         $scope.updateTodo = updateTodo;
+
+        function init() {
+            findAllTodos();
+        }
+        init();
+
+        function findAllTodos() {
+            $http.get('/api/todo')  //get function returns a promise
+                .then(function (response) {
+                    $scope.todos = response.data;
+                });//call back function
+        }
 
         // event handlers
         function removeTodo(todo) { //index){
@@ -32,9 +32,7 @@
             var index = $scope.todos.indexOf(todo);
             // $scope.todos.splice(index, 1);
             $http.delete('/api/todo/'+index)
-                .then(function (response) {
-                    $scope.todos = response.data;
-                });
+                .then(findAllTodos);
         }
         function addTodo(todo) {
             // var newTodo= {
