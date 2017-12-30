@@ -1,3 +1,4 @@
+
 var express = require('express');
 var app = express();  //https://expressjs.com/en/4x/api.html
 
@@ -13,6 +14,7 @@ app.use(express.static(__dirname + '/public'));  //static content that can be se
 var myApp = require('./lectures/afternoon/app'); // the value of myApp comes from module.exports from server-side app.js
 // console.log(myApp);
 // myApp.sayHello();
+
 myApp(app);
 
 app.listen(3000);

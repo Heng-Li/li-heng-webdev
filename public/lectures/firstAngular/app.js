@@ -17,7 +17,7 @@
 // only use relative path here, since it comes from the same server. for cross-domain, it is different
         $http.get('/api/todo')  //get function returns a promise
             .then(function (response) {
-                console.log(response);
+                // console.log(response);
                 $scope.todos = response.data;
             });//call back function
 
@@ -53,8 +53,5 @@
             $scope.todos[$scope.selectedIndex] = angular.copy(todo);
         }
     }
-
-
-
 
 })();  //anonymous function. the last parens say invoke this function
