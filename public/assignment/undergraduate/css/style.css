@@ -1,0 +1,17 @@
+input.form-control,
+textarea.form-control{
+    margin-bottom: 5px;
+}
+
+body {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.navbar-default {
+    background-color: darkblue;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+}

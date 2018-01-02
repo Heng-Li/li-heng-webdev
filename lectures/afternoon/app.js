@@ -8,6 +8,7 @@ module.exports = function (app) {
     app.get('/api/todo', findAllTodos);
     app.get('/api/todo/:index', findTodoByIndex);
     app.delete('/api/todo/:index', deleteTodo);
+    app.post('/api/todo/', addTodo);
 
     function findAllTodos(req, res) {
         res.json(todos);
@@ -20,6 +21,11 @@ module.exports = function (app) {
 
     function deleteTodo(req, res) {
         todos.splice(req.params.index, 1);
+        res.json(todos);
+    }
+
+    function addTodo(req, res) {
+        console.log(req);
         res.json(todos);
     }
 }

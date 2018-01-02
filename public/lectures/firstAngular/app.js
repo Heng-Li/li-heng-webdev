@@ -38,10 +38,17 @@
             // var newTodo= {
             //     title: todo.title
             // };
+            // var newTodo = angular.copy(todo);
+            // newTodo._id = (new Date()).getTime();  //fake unique identifier
+            // newTodo.date = new Date();
+            // $scope.todos.push(newTodo);
             var newTodo = angular.copy(todo);
-            newTodo._id = (new Date()).getTime();  //fake unique identifier
+            newTodo._id = (new Date()).getTime();
             newTodo.date = new Date();
-            $scope.todos.push(newTodo);
+            $http.post('/api/todo/')
+                .then(findAllTodos);
+            //////add function on server
+
         }
         function selectTodo(index) {
             $scope.todo = angular.copy($scope.todos[index]);
