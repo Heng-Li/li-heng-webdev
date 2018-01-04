@@ -1,5 +1,6 @@
 input.form-control,
-textarea.form-control{
+textarea.form-control,
+select.form-control {
     margin-bottom: 5px;
 }
 
@@ -15,3 +16,36 @@ body {
 .navbar-default .navbar-brand {
     color: white;
 }
+
+
+.scrollable-left {
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    overflow: scroll;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .col-sm-8 {
+        margin-left: 33%;
+    }
+}
+
+.wd-toolbar {
+    position: absolute;
+    background: white;
+    top: 0px;
+    right: 0px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    border-bottom-left-radius: 10px;
+    opacity: 0.8;
+}
+
+.wd-widget{
+    position: relative;
+    margin-bottom: 15px;
+}
+
