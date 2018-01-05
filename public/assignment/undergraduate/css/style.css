@@ -20,10 +20,43 @@ body {
     color: white;
 }
 
-.wd-header {
+.wd-footer {
     padding-top: 15px;
     padding-bottom: 15px;
     padding-right: 0;
+    padding-left: 0;
+}
+
+.wd-widget-header .wd-header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width:auto;
+}
+
+.wd-website-header .wd-header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.wd-widget-header .wd-header-right,
+.wd-website-header .wd-header-right {
+    padding-left: 0px;
+    padding-right: 20px;
+}
+
+.wd-website-header .wd-website-grid {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin: 0px;
+}
+
+.wd-website-header .wd-header-left {
+    padding-right: 0px;
+}
+
+.wd-website-header .wd-header-left .wd-header {
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
 .wd-header-left {
@@ -35,6 +68,18 @@ body {
     padding: 0;
     margin: 0;
     height: auto;
+}
+
+.wd-back-icon {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.wd-widget-header .wd-header {
+    width:auto;
 }
 
 
@@ -116,4 +161,14 @@ body {
 
 .wd-page {
     background: #000;
+}
+
+
+.wd-widget-header {
+    background: #ebebeb;
+}
+
+.wd-widget-header .glyphicon,
+.wd-widget-header .wd-page-header{
+    color: black;
 }
