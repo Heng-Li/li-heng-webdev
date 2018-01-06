@@ -152,21 +152,13 @@ body {
 
 
 .wd-page-header {
-    color:#333;
+    color:white;
     float: left;
     font-size: 18px;
     line-height: 20px;
     font-weight: bold;
 }
 
-.wd-page-header .glyphicon {
-    color: #333;
-}
-
-.wd-page-header .wd-header {
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
 .wd-page {
     background: #000;
 }

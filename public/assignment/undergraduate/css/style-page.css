@@ -12,10 +12,6 @@ body {
     margin-bottom: 60px;
 }
 
-.navbar-default {
-    background-color: #337ab7;
-}
-
 .navbar-default .navbar-brand {
     color: white;
 }
@@ -88,7 +84,7 @@ body {
 /*Icon coloring*/
 .wd-header-footer-icon .glyphicon,
 .wd-back-icon .glyphicon {
-    color: white;
+    color: black;
 }
 /**/
 
@@ -152,21 +148,13 @@ body {
 
 
 .wd-page-header {
-    color:#333;
+    color:black;
     float: left;
     font-size: 18px;
     line-height: 20px;
     font-weight: bold;
 }
 
-.wd-page-header .glyphicon {
-    color: #333;
-}
-
-.wd-page-header .wd-header {
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
 .wd-page {
     background: #000;
 }
