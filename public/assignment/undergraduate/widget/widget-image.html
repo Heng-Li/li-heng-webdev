@@ -2,20 +2,42 @@
 <html lang="en">
 <head>
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/style-widget.css" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
 
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">
-                Widget Image Editor
+
+<nav class="wd-widget-header navbar navbar-default navbar-fixed-top">
+    <div class="wd-header-left col-xs-10">
+        <div class="wd-back-icon col-xs-2">
+            <div>
+                <a href="widget-choose.html">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+            </div>
+        </div>
+        <div class="wd-header col-xs-7">
+            <div class="navbar-header">
+                <a class="wd-page-header" href="#">
+                    Widget Edit
+                </a>
+            </div>
+        </div>
+        <div class="wd-header col-xs-3">
+
+        </div>
+    </div>
+
+    <div class="wd-header-right wd-header-right-list col-xs-2">
+        <div class="wd-header-footer-icon pull-right">
+            <a href="widget-choose.html">
+                <span class="glyphicon glyphicon-ok"></span>
             </a>
         </div>
     </div>
+
 </nav>
 
 <div class="container-fluid">
@@ -45,23 +67,24 @@
         <option value="5">5 (Smallest)</option>
     </select>
 
-    <a class="btn btn-danger btn-block">Delete</a>
+    <a href="widget-choose.html" class="btn btn-primary btn-block">Upload Image</a>
+
+    <a href="widget-choose.html" class="btn btn-danger btn-block">Delete</a>
 
 </div>
 
-<nav class="navbar navbar-default navbar-fixed-bottom">
-    <div class="container-fluid">
-        <!--<div class="navbar-header">-->
-        <!--<a class="navbar-brand" href="#">-->
 
-        <!--</a>-->
-        <!--</div>-->
+<nav class="wd-widget-header navbar navbar-default navbar-fixed-bottom">
+
+    <div class="wd-header col-xs-2 col-sm-1 pull-right">
         <div class="wd-header-footer-icon">
             <a href="../user/profile.html">
                 <span class="glyphicon glyphicon-user"></span>
             </a>
         </div>
     </div>
+
 </nav>
+
 </body>
 </html>

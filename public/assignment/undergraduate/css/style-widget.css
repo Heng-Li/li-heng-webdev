@@ -31,6 +31,7 @@ body {
     padding-top: 15px;
     padding-bottom: 15px;
     width:auto;
+    padding-left: 0px;
 }
 
 .wd-website-header .wd-header {
@@ -120,6 +121,7 @@ body {
     padding-bottom: 5px;
     border-bottom-left-radius: 10px;
     opacity: 0.8;
+    z-index: 1;
 }
 
 .wd-widget{
@@ -179,4 +181,14 @@ body {
 .wd-widget-header .glyphicon,
 .wd-widget-header .wd-page-header{
     color: black;
+}
+
+.wd-widget-iframe {
+    padding-bottom: 60%;
+}
+
+.wd-widget-iframe iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
