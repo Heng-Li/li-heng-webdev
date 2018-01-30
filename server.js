@@ -17,7 +17,12 @@ var myApp = require('./lectures/afternoon/app'); // the value of myApp comes fro
 
 myApp(app);
 
-app.listen(3000);
+
+var port = process.env.PORT || 3000;
+
+app.listen(port);
+
+// app.listen(3000);
 
 // var express = require('express');
 // var app = express();
