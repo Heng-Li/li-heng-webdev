@@ -1,0 +1,170 @@
+/*form-control margin bottom*/
+input.form-control,
+textarea.form-control,
+select.form-control {
+    margin-bottom: 5px;
+}
+/**/
+
+
+body {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+
+.wd-footer {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.wd-widget-header .wd-header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width:auto;
+}
+
+.wd-website-header .wd-header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.wd-widget-header .wd-header-right,
+.wd-website-header .wd-header-right {
+    padding-left: 0px;
+    padding-right: 20px;
+}
+
+.wd-website-header .wd-website-grid {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin: 0px;
+}
+
+.wd-website-header .wd-header-left {
+    padding-right: 0px;
+}
+
+.wd-website-header .wd-header-left .wd-header {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.wd-header-left {
+    padding-left: 0;
+    height: 40px;
+}
+
+.navbar-brand {
+    padding: 0;
+    margin: 0;
+    height: auto;
+}
+
+.wd-back-icon {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.wd-widget-header .wd-header {
+    width:auto;
+}
+
+
+/**/
+
+/*Icon coloring*/
+.wd-header-footer-icon .glyphicon,
+.wd-back-icon .glyphicon {
+    color: black;
+}
+/**/
+
+/*Scroll bar*/
+.scrollable-left {
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    overflow: scroll;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+    .col-sm-8 {
+        margin-left: 33%;
+    }
+}
+/**/
+
+
+/*Wigdet and toolbar*/
+.wd-toolbar {
+    position: absolute;
+    background: white;
+    top: 0px;
+    right: 0px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    border-bottom-left-radius: 10px;
+    opacity: 0.8;
+}
+
+.wd-widget{
+    position: relative;
+    margin-bottom: 15px;
+}
+/**/
+
+.wd-websitelist-head {
+    background: ghostwhite;
+    border: ghostwhite;
+    color: black;
+}
+
+.wd-websiteedit-head-right {
+    margin-left: 0px;
+}
+
+/*place at last to overide the effect from previous @media col-sm-8*/
+.wd-header-right {
+    margin-left: 0;
+    height: 40px;
+}
+
+.wd-header-right-list {
+    padding-top: 15px;
+    padding-bottom:15px;
+    padding-right: 40px;
+}
+
+
+.wd-page-header {
+    color:black;
+    float: left;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.wd-page {
+    background: #000;
+}
+
+
+.wd-widget-header {
+    background: #ebebeb;
+}
+
+.wd-widget-header .glyphicon,
+.wd-widget-header .wd-page-header{
+    color: black;
+}
