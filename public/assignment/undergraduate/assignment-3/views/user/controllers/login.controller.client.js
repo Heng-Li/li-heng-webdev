@@ -3,7 +3,7 @@
         .module('WAM') //retriving WAM
         .controller('loginController', loginController);
     
-    function loginController ($scope) {
+    function loginController ($scope, $location) {
 
         var users = [
             {_id: "123", username: "alice",    password: "alice",    firstName: "Alice",  lastName: "Wonder"  },
@@ -22,7 +22,8 @@
                 }
 
                 if(found) {
-                    $scope.message = "Welcome " + username;
+                    $location.url('/profile');
+                    // $scope.message = "Welcome " + username;
                 } else {
                     $scope.message = "Username " + username + " not found, please try again";
                 }
