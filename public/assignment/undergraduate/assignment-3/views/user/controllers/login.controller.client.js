@@ -3,7 +3,10 @@
         .module('WAM') //retriving WAM
         .controller('loginController', loginController);
     
-    function loginController ($scope, $location) {
+    function loginController ($location) {
+
+        var model = this;
+
 
         var users = [
             {_id: "123", username: "alice",    password: "alice",    firstName: "Alice",  lastName: "Wonder"  },
@@ -12,8 +15,8 @@
             {_id: "456", username: "jannunzi", password: "jannunzi", firstName: "Jose",   lastName: "Annunzi" }
         ];
 
-        $scope.login = function (username, password){
-            console.log([username, password]);
+        model.login = function (username, password){
+           // console.log([username, password]);
             var found = false;
             for(var u in users) {
                 var user = users[u];
@@ -25,7 +28,7 @@
                     $location.url('/profile');
                     // $scope.message = "Welcome " + username;
                 } else {
-                    $scope.message = "Username " + username + " not found, please try again";
+                    model.message = "Username " + username + " not found, please try again";
                 }
             }
         };

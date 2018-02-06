@@ -10,7 +10,8 @@
             })
             .when('/login', {
                 templateUrl: 'views/user/templates/login.view.client.html',
-                controller: 'loginController'
+                controller: 'loginController',
+                controllerAs: 'vm'  //view model, guide the template to refer to the instance of controller.
             })
             .when('/register', {
                 templateUrl: 'views/user/templates/register.view.client.html'
