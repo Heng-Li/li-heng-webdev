@@ -17,20 +17,22 @@
 
         model.login = function (username, password){
            // console.log([username, password]);
-            var found = false;
+            var found = null;
             for(var u in users) {
                 var user = users[u];
-                if(user.username === username && user.password === password) {
-                    found = true;
-                }
-
-                if(found) {
-                    $location.url('/profile');
-                    // $scope.message = "Welcome " + username;
-                } else {
-                    model.message = "Username " + username + " not found, please try again";
+                if (user.username === username && user.password === password) {
+                    found = user;
+                    break;
                 }
             }
+
+            if(found !== null) {
+                $location.url('/profile/' + found._id);
+                // $scope.message = "Welcome " + username;
+            } else {
+                model.message = "Username " + username + " not found, please try again";
+            }
+
         };
     }
 })();
